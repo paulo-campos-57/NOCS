@@ -1,0 +1,46 @@
+{% extends 'sr\base.html' %}
+{% load static %}
+{% block conteudo %}
+<div class="item" style="text-align: justify;">
+    <div>
+        <nav style="display: flex; flex-flow: row nowrap;">
+            <ul style="display: flex; flex-flow: row nowrap; margin: auto;">
+                <li style="margin: 0 5px; padding: 4px 8px; font-size: 1em; list-style: none;
+                    text-align: center; align-items: center; justify-content: center;">
+                    <img src="{% static 'img/item_1.png' %}" alt="item_1" style="align-items: justify; 
+                            max-width: 400px;">
+                    <h1><strong>ITEM 1</strong></h1>
+                    <p style="font-size: larger;">
+                        <strong>Preço:</strong> 50 <img src="{% static 'img/moeda.png' %}" alt="moedas_preco">
+                    </p>
+                </li>
+                <li style="margin: 0 5px; padding: 4px 8px; font-size: 1em; list-style: none;
+                text-align: center; align-items: center; justify-content: center;">
+                    <h1>Item 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ad totam suscipit asperiores repudiandae consectetur quas, 
+                        velit quam fugiat veniam error aliquid unde aspernatur, nostrum nihil laudantium hic 
+                        incidunt iure atque cum! Itaque, dolorum. Aspernatur non dolore, iure consequatur 
+                        ipsum officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ex asperiores perferendis iusto natus, incidunt neque sit ipsam accusamus 
+                        soluta voluptatem animi voluptates quam quia eius laboriosam assumenda distinctio 
+                        quisquam fugit necessitatibus vel eaque sint! Minima minus sit perspiciatis aliquid sed!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis accusantium nemo ut 
+                        natus cupiditate maiores commodi. Vel saepe placeat quas laborum reiciendis soluta a 
+                        dolore quis doloribus, sed sequi sunt obcaecati possimus laudantium dicta est omnis. 
+                        Omnis magni ratione adipisci?
+                    </p>
+                    <p>
+                        <strong>Preço: </strong> 50 <img src="{% static 'img/moeda.png' %}" alt="moeda">
+                    </p>
+                    <button style="border-radius: 5%; background-color: green; color: #000;"
+                            onclick="alert('Compra efetuada com sucesso!')">
+                        Comprar
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}
