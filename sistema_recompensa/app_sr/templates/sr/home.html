@@ -1,0 +1,43 @@
+{% extends 'sr\base.html' %}
+{% load static %}
+{% block conteudo %}
+<div class="container" style="text-align: center; box-sizing: border-box; margin: 0 auto;">
+    <h1>Loja de Recompensas</h1>
+    <nav style="display: flex; flex-flow: row nowrap;">
+        <ul style="display: flex; flex-flow: row nowrap; margin: auto;">
+            <a href="{% url 'descr' %}" style="text-decoration: none; color: #000;">
+                <li style="margin: 0 5px; padding: 4px 8px; font-size: 1em; list-style: none;
+                        align-items: center; justify-content: center; text-align: center;">
+                    <img src="{% static 'img/item_1.png' %}" alt="item 1" 
+                        style="max-height: 400px; max-width: 400px; cursor: pointer;">
+                    <h3>Item 1</h3>
+                    <p>
+                        Descrição do item 1<br>
+                        <strong>Preço: </strong> 50 <img src="{% static 'img/moeda.png' %}" alt="moeda">
+                    </p>
+                </li>
+            </a>
+            <li style="margin: 0 5px; padding: 4px 8px; font-size: 1em; list-style: none;
+            align-items: center; justify-content: center; text-align: center;">
+                <img src="{% static 'img/item_2.png' %}" alt="item 2"
+                    style="height: 400px; width: 300px; cursor: pointer;">
+                <h3>Item 2</h3>
+                <p>
+                    Descrição do item 2<br>
+                    <strong>Preço: </strong> 500 <img src="{% static 'img/moeda.png' %}" alt="moeda">
+                </p>
+            </li>
+            <li style="margin: 0 5px; padding: 4px 8px; font-size: 1em; list-style: none;
+            align-items: center; justify-content: center; text-align: center;">
+                <img src="{% static 'img/item_3.png' %}" alt="item 2"
+                    style="max-height: 400px; max-width: 400px; cursor: pointer;">
+                <h3>Item 3</h3>
+                <p>
+                    Descrição do item 3<br>
+                    <strong>Preço: </strong> 70 <img src="{% static 'img/moeda.png' %}" alt="moeda">
+                </p>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
