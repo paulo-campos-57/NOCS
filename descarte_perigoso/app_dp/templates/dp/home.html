@@ -1,0 +1,38 @@
+{% extends 'dp\base.html' %}
+{% block conteudo %}
+<div class="container" style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%;">
+    <h1>NOCS-GO</h1>
+    <form action="{% url 'mensagens' %}" method="post">
+        {% csrf_token %}
+        <h2>Descartando resíduos perigosos?</h2>
+        <p>
+            Informe o resíduo que está descartando para que os coletores não corram o risco de se machucar na coleta!
+        </p>
+        Nome: <input name="nome" class="form-control-sm" type="text" size="40"><br><br>
+        E-mail: <input name="email" class="form-control-sm" type="email" size="60"><br><br>
+        Endereço: <input name="endereco" class="form-control-sm" type="text" size="70"><br><br>
+        Informe o tipo: <br>
+        <div>
+            <input type="checkbox" name="corte">
+            <label for="corte">Cortante</label>
+        </div>
+        <div>
+            <input type="checkbox" name="peso">
+            <label for="peso">Pesado</label>
+        </div>
+        <div>
+            <input type="checkbox" name="hosp">
+            <label for="hosp">Hospitalar</label>
+        </div>
+        <br>
+        Mensagem (dê uma descrição sobre em qual sacola está descartando): <br>
+        <input name="texto" type="text" size="90"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+             font-size: larger; margin-bottom: 2%;">
+            Enviar
+        </button>
+    </form>
+</div>
+{% endblock %}
