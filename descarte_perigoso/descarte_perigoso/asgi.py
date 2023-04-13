@@ -1,5 +1,5 @@
 """
-ASGI config for descarte_perigoso project.
+ASGI config for sistema_recompensa project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'descarte_perigoso.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sistema_recompensa.settings')
 
 application = get_asgi_application()
