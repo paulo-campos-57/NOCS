@@ -21,6 +21,12 @@ O NOCS (Nova Organização de Coleta Seletiva) tem como objetivo auxiliar o trab
 
 ## Contribuições
 
+## Diagrama de Atividades
+
+-  <a href="https://user-images.githubusercontent.com/91835392/232210291-9e4a72fb-4874-4a52-83c1-bb60f3045760.png" target="_blank">Página inicial</a>
+-  <a href="https://user-images.githubusercontent.com/91835392/232209909-d134b4e3-1b76-416d-a222-5f0dc0628e4f.png" target="_blank">Loja de Recompensas</a> 
+-  <a href="https://user-images.githubusercontent.com/91835392/232209945-c5dae146-2fca-4abb-9c45-c1f5851cceab.png" target="_blank">Descarte de resíduos perigosos</a> 
+
 ## Links
 
 <a href="https://nocs-fds.atlassian.net/jira/software/projects/NOCS/boards/1" target="_blank">Jira</a>
