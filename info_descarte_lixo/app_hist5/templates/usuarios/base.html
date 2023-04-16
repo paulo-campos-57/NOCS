@@ -1,0 +1,59 @@
+<!-- STARTER TEMPLATE FROM: https://getbootstrap.com/docs/5.0/getting-started/introduction/-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>NOCS</title>
+</head>
+<body>
+    <nav style="background-color: black !important; font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex; flex-flow: row nowrap; height: 2%;" 
+            class="navbar navbar-light bg-light">
+        <div class="titulo" style="margin-left: 1%;font-size: 40px;">
+            <a style="text-decoration: none; color: green;" href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="logo" style="max-width: 40px;">
+                 NOCS
+            </a>
+        </div>
+        <ul style="display: flex; flex-flow: row nowrap; margin: auto;">
+            <li style="margin-left: 870px; padding: 4px 2px; font-size: 1em; list-style: none; width: auto;">
+                <div class="prof">
+                    <span class="navbar-brand mb-0 h1" style="color: green; align-items: end; font-size: 30px;">
+                        profile_name<br>
+                        <center>
+                            999<img src="{% static 'img/moeda.png' %}" alt="moedas_usuario">
+                        </center>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    {% block conteudo %}
+    {% endblock %}
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <footer style="background-color: #000; width: 100%; align-items: center; text-align: center;
+            height: fit-content; line-height: 70px;">
+        <img src="{% static 'img/logo.png' %}" alt="logo" style="max-width: 50px;">
+    </footer>
+</body>
+</html>
