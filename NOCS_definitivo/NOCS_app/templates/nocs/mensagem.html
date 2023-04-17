@@ -1,0 +1,24 @@
+{% extends 'nocs\base_b.html' %}
+{% block conteudo %}
+<div class="container" 
+        style="text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        min-height: 450px;">
+    <h1>Obrigado por sua mensagem</h1>
+    <p>
+        Sua mensagem foi enviada para os nossos coletores! Agora eles poderão ter mais segurança recolhendo o lixo!
+    </p>
+    <br>
+    <a href="{% url 'coletor' %}" style="text-decoration: none;">
+        <button style="border-radius: 5%; background-color: green; color: #000;">
+            Visão do coletor
+        </button>
+    </a>
+    <br>
+    <br>
+    <a href="{% url 'indice' %}" style="text-decoration: none;">
+        <button style="border-radius: 5%; background-color: green; color: #000;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

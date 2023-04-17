@@ -1,0 +1,21 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container" style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%; min-height: 450px;">
+    <h1>NOCS</h1>
+    <form action="{% url 'logged' %}" method="post">
+        {% csrf_token %}
+        <h2>Seja Bem vindo!</h2>
+        <p>
+            Informe suas informações para entrar no NOCS
+        </p>
+        E-mail: <input name="email" class="form-control-sm" type="email" size="60"><br><br>
+        Senha: <input name="senha" class="form-control-sm" type="password" size="60"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+             font-size: larger; margin-bottom: 2%;">
+            Entrar
+        </button>
+    </form>
+</div>
+{% endblock %}
