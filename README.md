@@ -7,10 +7,8 @@
 ## Membros:
 - <a href="https://github.com/Adaurekt" target="_blank">Adaury Neto</a> - aogn@cesar.school
 - <a href="https://github.com/DiegoRodrigues76" target="_blank">Diego Sawyer</a> - dhrm@cesar.school
-- <a href="https://github.com/gl-schneck" target="_blank">Guilherme Schneck</a> - gls2@cesar.school
 - <a href="https://github.com/guiga-sa" target="_blank">Guilherme Silveira</a> - gsa3@cesar.school
 - <a href="https://github.com/paulo-campos-57" target="_blank">Paulo Campos</a> - pmc3@cesar.school
-- <a href="https://github.com/ViniCabralS" target="_blank">Vinícius Cabral</a> - vcs3@cesar.school
 
 ## Visão geral 
 
