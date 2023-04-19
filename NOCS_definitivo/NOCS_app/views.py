@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Usuario
 from .models import Mensagem
 from .models import Pergunta
+from .models import Cadastro
 
 def home(request):
     return render(request, 'nocs/home.html')
@@ -58,3 +59,15 @@ def enviado(request):
     nova_pergunta.save()
 
     return render(request, 'nocs/enviado.html')
+
+def cadastro(request):
+    return render(request, 'nocs/cadastro.html')
+
+def confirmado(request):
+    novo_cadastro = Cadastro()
+
+    novo_cadastro.username = request.POST.get('username')
+    novo_cadastro.email = request.POST.get('email')
+    novo_cadastro = request.POST.get('password1')
+
+    return render(request, 'nocs/confirmado.html')

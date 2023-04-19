@@ -4,7 +4,9 @@ from NOCS_app import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('nocs/', views.logged, name='logged'),
+    path('nocs/cadastro', views.cadastro, name='cadastro'),
+    path('nocs/logged', views.logged, name='logged'),
+    path('nocs/cadastro/confirmado', views.confirmado, name='confirmado'),
     path('nocs/indice', views.indice, name='indice'),
     path('nocs/descarte_p', views.descarte_perigoso, name='descarte_perigoso'),
     path('nocs/descarte_p/mensagem', views.mensagem, name='mensagem'),

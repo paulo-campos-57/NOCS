@@ -8,7 +8,7 @@
         {% csrf_token %}
         <h2>Seja Bem vindo!</h2>
         <p>
-            Informe suas informações para entrar no NOCS
+            Preencha as informações para entrar no NOCS
         </p>
         E-mail: <input name="email" class="form-control-sm" type="email" size="60"><br><br>
         Senha: <input name="senha" class="form-control-sm" type="password" size="60"><br><br>
@@ -16,6 +16,9 @@
              font-size: larger; margin-bottom: 2%;">
             Entrar
         </button>
+        <br>
+        Ainda não tem uma conta?
+        <a href="{% url 'cadastro' %}">Cadastre-se!</a>
     </form>
 </div>
 {% endblock %}

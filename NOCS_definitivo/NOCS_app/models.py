@@ -17,3 +17,9 @@ class Pergunta(models.Model):
     email = models.TextField(max_length=355)
     texto = models.TextField(max_length=3000)
 
+class Cadastro(models.Model):
+    id = models.AutoField(primary_key=True)
+    username = models.TextField(max_length=255)
+    email = models.TextField(max_length=355)
+    password1 = models.TextField(max_length=100)
+

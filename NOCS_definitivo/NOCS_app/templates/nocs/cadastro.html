@@ -1,0 +1,21 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container", style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%; min-height: 450px;">
+    <h1>Faça seu cadastro no NOCS</h1>
+    <form action="{% url 'confirmado' %}" method="post">
+        {% csrf_token %}
+        <p>
+            Preencha os dados para fazer seu cadastro
+        </p>
+        Informe seu nome: <input name="username" class="form-control-sm" type="text" size="60"><br><br>
+        Informe seu E-mail: <input name="email" class="form-control-sm" type="email" size="60"><br><br>
+        Informe a Senha: <input name="password1" class="form-control-sm" type="password" size="60"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Cadastrar
+        </button>
+    </form>
+</div>
+{% endblock %}
