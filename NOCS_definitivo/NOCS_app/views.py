@@ -68,6 +68,11 @@ def confirmado(request):
 
     novo_cadastro.username = request.POST.get('username')
     novo_cadastro.email = request.POST.get('email')
-    novo_cadastro = request.POST.get('password1')
+    novo_cadastro.password1 = request.POST.get('password1')
+    novo_cadastro.bairro = request.POST.get('bairro')
+    novo_cadastro.rua = request.POST.get('rua')
+    novo_cadastro.numero = request.POST.get('numero')
+    novo_cadastro.complemento = request.POST.get('complemento')
+    novo_cadastro.save()
 
     return render(request, 'nocs/confirmado.html')

@@ -6,16 +6,25 @@
     <h1>Faça seu cadastro no NOCS</h1>
     <form action="{% url 'confirmado' %}" method="post">
         {% csrf_token %}
-        <p>
-            Preencha os dados para fazer seu cadastro
-        </p>
+        <h3 style="text-align: center;">Informações pessoais</h3>
         Informe seu nome: <input name="username" class="form-control-sm" type="text" size="60"><br><br>
-        Informe seu E-mail: <input name="email" class="form-control-sm" type="email" size="60"><br><br>
-        Informe a Senha: <input name="password1" class="form-control-sm" type="password" size="60"><br><br>
+        Informe seu e-mail: <input name="email" class="form-control-sm" type="email" size="60"><br><br>
+        Informe a senha: <input name="password1" class="form-control-sm" type="password" size="60"><br><br>
+        <h3 style="text-align: center;">Informações sobre Endereço</h3>
+        Informe o seu bairro: <input name="bairro" class="form-control-sm" type="text" size="60"><br><br>
+        Informe a sua rua: <input name="rua" class="form-control-sm" type="text" size="60"><br><br>
+        Informe o número da sua casa: <input name="numero" class="form-control-sm" type="number" size="60"><br><br>
+        Informe o complemento: <input name="complemento" class="form-control-sm" type="text" size="60"><br><br>
         <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
                 font-size: larger; margin-bottom: 2%;">
             Cadastrar
         </button>
     </form>
+    <a href="{% url 'home' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
 </div>
 {% endblock %}

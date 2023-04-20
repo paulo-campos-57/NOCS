@@ -22,4 +22,7 @@ class Cadastro(models.Model):
     username = models.TextField(max_length=255)
     email = models.TextField(max_length=355)
     password1 = models.TextField(max_length=100)
-
+    bairro = models.TextField(default='-')
+    rua = models.TextField(default='')
+    numero = models.IntegerField(default=0)
+    complemento = models.TextField(default='-')
