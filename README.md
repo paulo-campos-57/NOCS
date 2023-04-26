@@ -1,5 +1,5 @@
 # N.O.C.S
-**Nova Organização de Coleta Seletiva**
+**Nova Organização de Coleta Sanitária**
 
 
 
@@ -12,7 +12,7 @@
 
 ## Visão geral 
 
-O NOCS (Nova Organização de Coleta Seletiva) tem como objetivo auxiliar o trabalho de coleta de lixo reduzindo o tempo e o gasto com patrulhas dos caminhões de coleta.
+O NOCS (Nova Organização de Coleta Sanitária) tem como objetivo auxiliar o trabalho de coleta de lixo reduzindo o tempo e o gasto com patrulhas dos caminhões de coleta.
 
 ## Como foi desenvolvido o projeto
 Para o desenvolvimento do projeto utilizamos a programação em pares, separando as três histórias entre os membros (2 membros por história), ficando um dos membros resposável pela parte de front-end e outro pela parte de back-end. Para os commits, apenas um membro ficou encarregado para que não tivéssemos problemas de merge.
