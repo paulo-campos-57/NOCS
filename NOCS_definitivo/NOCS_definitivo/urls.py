@@ -5,6 +5,7 @@ from NOCS_app import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('nocs/cadastro', views.cadastro, name='cadastro'),
+    path('nocs/sobre', views.sobre, name='sobre'),
     path('nocs/logged', views.logged, name='logged'),
     path('nocs/cadastro/confirmado', views.confirmado, name='confirmado'),
     path('nocs/indice', views.indice, name='indice'),

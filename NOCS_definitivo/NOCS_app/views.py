@@ -76,3 +76,6 @@ def confirmado(request):
     novo_cadastro.save()
 
     return render(request, 'nocs/confirmado.html')
+
+def sobre(request):
+    return render(request, 'nocs/sobre.html')
