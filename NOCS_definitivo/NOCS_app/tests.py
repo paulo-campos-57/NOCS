@@ -10,4 +10,4 @@ class TestHome(LiveServerTestCase):
         self.browser.get('http://127.0.0.1:8000/')
         assert "NOCS" in self.browser.title # Vai rodar o teste
 
-# Rodar teste: diretório onde está o requirements e dá um python manage.py test
+# Rodar teste: diretório onde está o manage.py e dá um python manage.py test
