@@ -1,20 +1,35 @@
 from django.shortcuts import render, redirect
-from .models import Usuario
 from .models import Mensagem
 from .models import Pergunta
 from .models import Cadastro
+# from .models import perfil
 
 def home(request):
+    novo_usuario = Cadastro()
+    if request.method == "POST":
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
+
+        # print(email)
+        # print(senha)$$$$$
+        # print(Cadastro.objects.get(email))
+        try:
+            if (email == Cadastro.objects.get(email = email).email):
+                if (senha == Cadastro.objects.get(email = email).password1):
+                    # perfil = Cadastro.objects.get(email = email)
+                    # print(perfil.email)
+                    return render(request, 'nocs/logged.html')
+            # else:
+                # return render(request, 'nocs/nao_cadastrado.html')
+        except:
+            pass
     return render(request, 'nocs/home.html')
 
 def logged(request):
-    novo_usuario = Usuario()
-
-    novo_usuario.email = request.POST.get('email')
-    novo_usuario.senha = request.POST.get('senha')
-    novo_usuario.save()
-
-    return render(request, 'nocs/logged.html')
+    # context = {
+        # 'perfil': perfil,
+    # }
+    return render(request, 'nocs/logged.html')# , context)
 
 def indice(request):
     return render(request, 'nocs/indice.html')
