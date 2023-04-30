@@ -19,10 +19,8 @@ def home(request):
                     # perfil = Cadastro.objects.get(email = email)
                     # print(perfil.email)
                     return render(request, 'nocs/logged.html')
-            # else:
-                # return render(request, 'nocs/nao_cadastrado.html')
         except:
-            pass
+            return render(request, 'nocs/nao_cadastrado.html')
     return render(request, 'nocs/home.html')
 
 def logged(request):
@@ -30,6 +28,9 @@ def logged(request):
         # 'perfil': perfil,
     # }
     return render(request, 'nocs/logged.html')# , context)
+
+def nao_cadastrado(request):
+    return render(request, 'nocs/nao_cadastrado.html')
 
 def indice(request):
     return render(request, 'nocs/indice.html')
