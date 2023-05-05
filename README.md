@@ -6,6 +6,7 @@
 
 ## Membros:
 - <a href="https://github.com/Adaurekt" target="_blank">Adaury Neto</a> - aogn@cesar.school
+- <a href="https://github.com/TomCabral" target= " blank">Antônio Cabral</a> - apbc@cesar.school
 - <a href="https://github.com/DiegoRodrigues76" target="_blank">Diego Sawyer</a> - dhrm@cesar.school
 - <a href="https://github.com/guiga-sa" target="_blank">Guilherme Silveira</a> - gsa3@cesar.school
 - <a href="https://github.com/paulo-campos-57" target="_blank">Paulo Campos</a> - pmc3@cesar.school
