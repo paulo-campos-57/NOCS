@@ -2,35 +2,43 @@ from django.shortcuts import render, redirect
 from .models import Mensagem
 from .models import Pergunta
 from .models import Cadastro
-# from .models import perfil
+from .models import Coletor
 
 def home(request):
     novo_usuario = Cadastro()
     if request.method == "POST":
         email = request.POST.get('email')
         senha = request.POST.get('senha')
-
-        # print(email)
-        # print(senha)$$$$$
-        # print(Cadastro.objects.get(email))
         try:
             if (email == Cadastro.objects.get(email = email).email):
                 if (senha == Cadastro.objects.get(email = email).password1):
-                    # perfil = Cadastro.objects.get(email = email)
-                    # print(perfil.email)
                     return render(request, 'nocs/logged.html')
         except:
             return render(request, 'nocs/nao_cadastrado.html')
     return render(request, 'nocs/home.html')
 
+def home_coletor(request):
+    usuario = Coletor()
+    if request.method == "POST":
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        try:
+            if (email == Coletor.objects.get(email = email).email):
+                if (password == Coletor.objects.get(email = email).password):
+                    return render(request, 'nocs/confirmado_coletor.html')
+        except:
+            return render(request, 'nocs/nao_cadastrado_coletor.html')
+    return render(request, 'nocs/home_coletor.html')
+
 def logged(request):
-    # context = {
-        # 'perfil': perfil,
-    # }
-    return render(request, 'nocs/logged.html')# , context)
+    return render(request, 'nocs/logged.html')
 
 def nao_cadastrado(request):
     return render(request, 'nocs/nao_cadastrado.html')
+
+def nao_cadastrado_coletor(request):
+    return render(request, 'nocs/nao_cadastrado_coletor.html')
 
 def indice(request):
     return render(request, 'nocs/indice.html')
@@ -79,6 +87,9 @@ def enviado(request):
 def cadastro(request):
     return render(request, 'nocs/cadastro.html')
 
+def cadastro_coletor(request):
+    return render(request, 'nocs/cadastro_coletor.html')
+
 def confirmado(request):
     novo_cadastro = Cadastro()
 
@@ -92,6 +103,20 @@ def confirmado(request):
     novo_cadastro.save()
 
     return render(request, 'nocs/confirmado.html')
+
+def confirmado_coletor(request):
+    novo_coletor = Coletor()
+
+    novo_coletor.cpf = request.POST.get('cpf')
+    novo_coletor.username = request.POST.get('username')
+    novo_coletor.email = request.POST.get('email')
+    novo_coletor.password = request.POST.get('password')
+
+    novo_coletor.save()
+    return render(request, 'nocs/confirmado_coletor.html')
+
+def indice_coletor(request):
+    return render(request, 'nocs/indice_coletor.html')
 
 def sobre(request):
     return render(request, 'nocs/sobre.html')

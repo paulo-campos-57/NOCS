@@ -1,0 +1,17 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container" style="text-align: center; min-height: 470px;">
+    <h1>
+        Bem vindo coletor!
+    </h1>
+    <p style="text-align: center; font-size: larger;">
+        Muito obrigado por realizar seu cadastro!
+    </p>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Continuar
+        </button>
+    </a>
+</div>
+{% endblock %}
