@@ -3,6 +3,7 @@ from .models import Mensagem
 from .models import Pergunta
 from .models import Cadastro
 from .models import Coletor
+from .models import Horario
 
 def home(request):
     novo_usuario = Cadastro()
@@ -117,6 +118,21 @@ def confirmado_coletor(request):
 
 def indice_coletor(request):
     return render(request, 'nocs/indice_coletor.html')
+
+def informar_coleta(request):
+    novo_horario = Horario()
+    if request.method == 'POST':
+        novo_horario.bairro_hora = request.POST.get('bairro')
+        novo_horario.day = request.POST.get('dia')
+        novo_horario.mes = request.POST.get('mes')
+        novo_horario.horario = request.POST.get('horario')
+
+        novo_horario.save()
+        return render(request, 'nocs/horario_marcado.html')
+    return render(request, 'nocs/informar_coleta.html')
+
+def horario_marcado(request):
+    return render(request, 'nocs/horario_marcado.html')
 
 def sobre(request):
     return render(request, 'nocs/sobre.html')

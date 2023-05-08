@@ -1,0 +1,28 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container" style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%;">
+    <h1>Próxima coleta</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>
+            Informe o horário previsto para a próxima coleta nos bairros!
+        </p>
+        Bairro: <input name="bairro" class="form-control-sm" type="text" size="60"><br><br>
+        Dia: <input name="dia" class="form-control-sm" type="number" size="60"><br><br>
+        Mês: <input name="mes" class="form-control-sm" type="number" size="60"><br><br>
+        Horário previsto: <input name="horario" class="form-control-sm" type="text" size="60"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+             font-size: larger; margin-bottom: 2%;">
+            Enviar
+        </button>
+    </form>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

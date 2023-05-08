@@ -1,0 +1,17 @@
+{% extends 'nocs\base_a.html' %}
+{% load static %}
+{% block conteudo %}
+<div class="container" style="text-align: center; min-height: 410px;">
+    <h1>Horário Marcado!</h1>
+    <p>
+        O horário foi marcado no respectivo bairro, e será informado para os nossos usuários<br>
+        A equipe NOCS agradece sua a passagem da informação!
+    </p>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 10ch; 
+                    font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

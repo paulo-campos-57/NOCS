@@ -29,4 +29,11 @@ class Coletor(models.Model):
     email = models.TextField(max_length=355)
     password = models.TextField(max_length=100)
 
+class Horario(models.Model):
+    id = models.AutoField(primary_key=True)
+    bairro_hora = models.TextField(default='-')
+    day = models.IntegerField(default=1, null=False)
+    mes = models.IntegerField(default=1)
+    horario = models.TextField(max_length=10)
+
 # perfil = Cadastro()
