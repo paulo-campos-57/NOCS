@@ -23,9 +23,10 @@ Para o desenvolvimento do projeto utilizamos a programação em pares, separando
 
 ## Diagrama de Atividades
 
--  <a href="https://user-images.githubusercontent.com/91835392/232210291-9e4a72fb-4874-4a52-83c1-bb60f3045760.png" target="_blank">Página inicial</a>
+-  <a href="https://github.com/paulo-campos-57/NOCS/assets/91835392/5895a2b1-cf91-40cc-b469-26e83e440355" target="_blank">Página inicial</a>
 -  <a href="https://user-images.githubusercontent.com/91835392/232209909-d134b4e3-1b76-416d-a222-5f0dc0628e4f.png" target="_blank">Loja de Recompensas</a> 
 -  <a href="https://user-images.githubusercontent.com/91835392/232209945-c5dae146-2fca-4abb-9c45-c1f5851cceab.png" target="_blank">Descarte de resíduos perigosos</a> 
+-  <a href="https://github.com/paulo-campos-57/NOCS/assets/91835392/f4a1b126-728d-41d3-bfb5-b81eb5c35932" target="_blank">Página inicial do Coletor</a> 
 
 ## Links
 
