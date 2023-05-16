@@ -53,4 +53,49 @@ class TestHome(LiveServerTestCase):
 
         assert "Cadastro bem sucedido" in driver.title
         
-        driver.close()
+        continuar = driver.find_element_by_css_selector("button[type='submit']")
+        continuar.click()
+
+        time.sleep(2)
+
+    def test_descarte_perigoso(self):
+        driver = webdriver.Chrome()
+        self.drive.get('http://127.0.0.1:8000/nocs/descarte_p')
+
+        username = driver.find_element_by_name("username")
+        username.sendkeys("meu_usuario")
+        email = driver.find_element_by_name("email")
+        email.sendkeys("meu_email@example.com")
+        endereco = driver.find_element_by_name("endereco")
+        endereco.sendkeys("meu_endereco")
+        checkbox = driver.find_element_by_css_selector("input[type='checkbox']")
+        checkbox.click()
+        mensagem = driver.find_element_by_name("mensagem")
+        mensagem.sendkeys("minha_mensagem")
+        enviar = driver.find_element_by_css_selector("button1[type='submit']")
+        enviar.click()
+
+        time.sleep(0.5)
+
+        voltar = driver.find_element_by_css_selector("button[type='submit']")
+        voltar.click()
+
+    def test_melhorar_descarte(self):
+        driver = webdriver.Chrome()
+        self.driver.get('http://127.0.0.1:8000/nocs/info/info_descarte')
+
+        email = driver.find_element_by_name("email")
+        email.sendkeys("meu_email@example.com")
+        pergunta = driver.find_element_by_name("pergunta")
+        pergunta.sendkeys("minha_pergunta")
+        enviar = driver.find_element_by_css_selector("button1[type='submit']")
+        enviar.click()
+
+        time.sleep(0.5)
+
+        voltar = driver.find_element_by_css_selector("button[type='submit']")
+        voltar.click()
+
+    
+
+    driver.close()
