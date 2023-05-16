@@ -6,7 +6,8 @@ from selenium.webdriver.common.keys import Keys
 class TestHome(LiveServerTestCase):
     driver = webdriver.Chrome()
     
-    def test_title(self):    
+    def test_title(self):
+        # Verifica o título da página
         self.driver.get('http://127.0.0.1:8000/')
         assert "NOCS" in self.driver.title
 
@@ -14,7 +15,7 @@ class TestHome(LiveServerTestCase):
         driver = webdriver.Chrome()
         self.driver.get("http://127.0.0.1:8000/")
 
-        #preenche os campos de login com informações erradas
+        # Preenche os campos de login com informações erradas
         username = driver.find_element_by_name("username")
         username.send_keys("usuario_inexistente")
         password = driver.find_element_by_name("password")
@@ -24,11 +25,11 @@ class TestHome(LiveServerTestCase):
         time.sleep(2)
         
         assert "Login incorreto" in driver.title
-        #clica no link para realizar o cadastro
+        # Clica no link para realizar o cadastro
         link_cadastro = driver.find_element_by_link_text('Cadastre-se')
         link_cadastro.click()
 
-        #preenche os campos do formulário de cadastro
+        # Preenche os campos do formulário de cadastro
         username = driver.find_element_by_name("username")
         username.send_keys("meu_usuario")
         email = driver.find_element_by_name("email")
@@ -53,5 +54,3 @@ class TestHome(LiveServerTestCase):
         assert "Cadastro bem sucedido" in driver.title
         
         driver.close()
-
-# Rodar teste: diretório onde está o manage.py e dá um python manage.py test
