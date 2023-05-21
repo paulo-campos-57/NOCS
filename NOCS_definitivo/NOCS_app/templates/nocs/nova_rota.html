@@ -1,0 +1,25 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container", style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%; min-height: 450px;">
+    <h1>Faça seu cadastro no NOCS</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3 style="text-align: center;">Informe a rota comprometida</h3>
+        Informe seu nome: <input name="name" class="form-control-sm" type="text" size="60"><br><br>
+        Informe rua com problema: <input name="rua" class="form-control-sm" type="text" size="60"><br><br>
+        Conhece alguma rota alternativa? <input name="alternativa" class="form-control-sm" type="text" size="60"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Enviar
+        </button>
+    </form>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

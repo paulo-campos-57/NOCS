@@ -1,0 +1,18 @@
+{% extends 'nocs\base_a.html' %}
+{% load static %}
+{% block conteudo %}
+<div class="container" style="text-align: center; min-height: 410px;">
+    <h1>Mensagem enviada!</h1>
+    <p>
+        O comprometimento na rota que você informou foi registrado e será repassado 
+        para nossos outros coletores!
+        A equipe NOCS agradece a sua ajuda!
+    </p>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 10ch; 
+                    font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

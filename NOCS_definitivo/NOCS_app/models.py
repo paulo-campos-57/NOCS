@@ -36,4 +36,10 @@ class Horario(models.Model):
     mes = models.IntegerField(default=1)
     horario = models.TextField(max_length=10)
 
+class Rotas(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome_coletor = models.TextField(max_length=255)
+    rua_problema = models.TextField(default='')
+    rota_alternativa = models.TextField(default='-')
+
 # perfil = Cadastro()

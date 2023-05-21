@@ -1,0 +1,32 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container" style="min-height: 500px; text-align: center;">
+    <a href="{% url 'nova_rota' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 15ch; height: 6.5ch;
+                    font-size: 3ch; margin-bottom: 2%;">
+            Deixe sua mensagem!
+        </button>
+    </a>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Rua com problema</th>
+            <th>Rota alternativa</th>
+            <th>Coletor informante</th>
+        </tr>
+        {% for rota in rotas %}
+        <tr>
+            <td>{{rotas.rua_problema}}</td>
+            <td>{{rotas.rota_alternativa}}</td>
+            <td>{{rotas.nome_coletor}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 15ch; height: 3.5ch;
+                    font-size: 3ch; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

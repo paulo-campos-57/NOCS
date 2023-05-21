@@ -4,6 +4,7 @@ from .models import Pergunta
 from .models import Cadastro
 from .models import Coletor
 from .models import Horario
+from .models import Rotas
 
 def home(request):
     novo_usuario = Cadastro()
@@ -133,6 +134,26 @@ def informar_coleta(request):
 
 def horario_marcado(request):
     return render(request, 'nocs/horario_marcado.html')
+
+def rotas(request):
+    rotas = {
+        'rotas': Rotas.objects.all()
+    }
+    return render(request, 'nocs/rotas.html', rotas)
+
+def nova_rota(request):
+    nova_rota = Rotas()
+    if request.method == 'POST':
+        nova_rota.nome_coletor = request.POST.get('name')
+        nova_rota.rua_problema = request.POST.get('rua')
+        nova_rota.rota_alternativa = request.POST.get('alternativa')
+
+        nova_rota.save()
+        return render(request, 'nocs/rota_confirmada.html')
+    return render(request, 'nocs/nova_rota.html')
+
+def rota_confirmada(request):
+    return render(request, 'nocs/rota_confirmada.html')
 
 def sobre(request):
     return render(request, 'nocs/sobre.html')
