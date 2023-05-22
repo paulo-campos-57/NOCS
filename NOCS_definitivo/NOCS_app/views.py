@@ -139,7 +139,6 @@ def rotas(request):
     rotas = {
         'rotas': Rotas.objects.all()
     }
-    print(rotas['rotas'][0].nome_coletor)
     return render(request, 'nocs/rotas.html', rotas)
 
 def nova_rota(request):
