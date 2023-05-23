@@ -18,9 +18,6 @@ O NOCS (Nova Organização de Coleta Sanitária) tem como objetivo auxiliar o tr
 ## Como foi desenvolvido o projeto
 Para o desenvolvimento do projeto utilizamos a programação em pares, separando equipes em funções diferentes. Uma das duplas ficou responsável pela criação do diagrama de atividades e atualizações no figma, já a outra foi responsável pelos testes com Selenium no projeto. Além disso, todos do grupo se integraram para o desenvolvimento das novas histórias para a entrega, fazendo com que elas ficassem alinhadas com o pensamento da maioria. Utilizamos também do método Kanban para a separação das nossas atividades da melhor maneira, o quadro dessa sprint e também da anterior pode ser encontrado em nosso <a href="https://nocs-fds.atlassian.net/jira/software/projects/NOCS/boards/1" target="_blank">Jira.</a>
 
-
-## Contribuições
-
 ## Diagrama de Atividades
 
 -  <a href="https://github.com/paulo-campos-57/NOCS/assets/91835392/5895a2b1-cf91-40cc-b469-26e83e440355" target="_blank">Página inicial</a>
