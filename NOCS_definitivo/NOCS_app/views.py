@@ -5,6 +5,7 @@ from .models import Cadastro
 from .models import Coletor
 from .models import Horario
 from .models import Rotas
+from .models import Avaliacao
 
 def home(request):
     novo_usuario = Cadastro()
@@ -154,6 +155,19 @@ def nova_rota(request):
 
 def rota_confirmada(request):
     return render(request, 'nocs/rota_confirmada.html')
+
+def avaliacao(request):
+    nova_avaliacao = Avaliacao()
+    if request.method == 'POST':
+        nova_avaliacao.coment_trabalho = request.POST.get('coment_trabalho')
+        nova_avaliacao.coment_plataforma = request.POST.get('coment_plataforma')
+
+        nova_avaliacao.save()
+        return render(request, 'nocs/avaliacao_confirmada.html')
+    return render(request, 'nocs/avaliacao.html')
+
+def avaliacao_confirmada(request):
+    return render(request, 'nocs/avaliacao_confirmada.html')
 
 def sobre(request):
     return render(request, 'nocs/sobre.html')

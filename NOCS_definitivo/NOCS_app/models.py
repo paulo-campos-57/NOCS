@@ -42,4 +42,9 @@ class Rotas(models.Model):
     rua_problema = models.TextField(default='')
     rota_alternativa = models.TextField(default='-')
 
+class Avaliacao(models.Model):
+    id = models.AutoField(primary_key=True)
+    coment_trabalho = models.TextField(max_length=10000)
+    coment_plataforma = models.TextField(max_length=10000)
+
 # perfil = Cadastro()

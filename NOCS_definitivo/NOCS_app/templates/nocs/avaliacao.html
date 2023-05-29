@@ -1,0 +1,115 @@
+{% extends 'nocs\base_a.html' %}
+{% block conteudo %}
+<div class="container", style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%; min-height: 450px;">
+    <h1>Dê sua opinião!</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3 style="text-align: center;">Como você avalia seu trabalho?</h3>
+        Segurança<br>
+        <label for="1">1</label>
+        <input type="radio" value="1" name="seguranca">
+        <label for="2">2</label>
+        <input type="radio" value="2" name="seguranca">
+        <label for="3">3</label>
+        <input type="radio" value="3" name="seguranca">
+        <label for="4">4</label>
+        <input type="radio" value="4" name="seguranca">
+        <label for="5">5</label>
+        <input type="radio" value="5" name="seguranca">
+        <label for="6">6</label>
+        <input type="radio" value="6" name="seguranca">
+        <label for="7">7</label>
+        <input type="radio" value="7" name="seguranca">
+        <label for="8">8</label>
+        <input type="radio" value="8" name="seguranca">
+        <label for="9">9</label>
+        <input type="radio" value="9" name="seguranca">
+        <label for="10">10</label>
+        <input type="radio" value="10" name="seguranca">
+        <br><br>
+        Acessibilidade<br>
+        <label for="1">1</label>
+        <input type="radio" value="1" name="acessibilidade">
+        <label for="2">2</label>
+        <input type="radio" value="2" name="acessibilidade">
+        <label for="3">3</label>
+        <input type="radio" value="3" name="acessibilidade">
+        <label for="4">4</label>
+        <input type="radio" value="4" name="acessibilidade">
+        <label for="5">5</label>
+        <input type="radio" value="5" name="acessibilidade">
+        <label for="6">6</label>
+        <input type="radio" value="6" name="acessibilidade">
+        <label for="7">7</label>
+        <input type="radio" value="7" name="acessibilidade">
+        <label for="8">8</label>
+        <input type="radio" value="8" name="acessibilidade">
+        <label for="9">9</label>
+        <input type="radio" value="9" name="acessibilidade">
+        <label for="10">10</label>
+        <input type="radio" value="10" name="acessibilidade">
+        <br><br>
+        Tem alguma sugestão ou crítica?<br>
+        <input name="coment_trabalho" class="form-control-sm" type="text" size="90"><br><br>
+        <h3 style="text-align: center;">Como você avalia a plataforma NOCS?</h3>
+        Facilidade de navegação<br>
+        <label for="1">1</label>
+        <input type="radio" value="1" name="facilidade">
+        <label for="2">2</label>
+        <input type="radio" value="2" name="facilidade">
+        <label for="3">3</label>
+        <input type="radio" value="3" name="facilidade">
+        <label for="4">4</label>
+        <input type="radio" value="4" name="facilidade">
+        <label for="5">5</label>
+        <input type="radio" value="5" name="facilidade">
+        <label for="6">6</label>
+        <input type="radio" value="6" name="facilidade">
+        <label for="7">7</label>
+        <input type="radio" value="7" name="facilidade">
+        <label for="8">8</label>
+        <input type="radio" value="8" name="facilidade">
+        <label for="9">9</label>
+        <input type="radio" value="9" name="facilidade">
+        <label for="10">10</label>
+        <input type="radio" value="10" name="facilidade">
+        <br><br>
+        Simplicidade da plataforma<br>
+        <label for="1">1</label>
+        <input type="radio" value="1" name="simplicidade">
+        <label for="2">2</label>
+        <input type="radio" value="2" name="simplicidade">
+        <label for="3">3</label>
+        <input type="radio" value="3" name="simplicidade">
+        <label for="4">4</label>
+        <input type="radio" value="4" name="simplicidade">
+        <label for="5">5</label>
+        <input type="radio" value="5" name="simplicidade">
+        <label for="6">6</label>
+        <input type="radio" value="6" name="simplicidade">
+        <label for="7">7</label>
+        <input type="radio" value="7" name="simplicidade">
+        <label for="8">8</label>
+        <input type="radio" value="8" name="simplicidade">
+        <label for="9">9</label>
+        <input type="radio" value="9" name="simplicidade">
+        <label for="10">10</label>
+        <input type="radio" value="10" name="simplicidade">
+        <br><br>
+        Tem alguma sugestão ou crítica?<br>
+        <input name="coment_plataforma" class="form-control-sm" type="text" size="90"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Enviar
+        </button>
+    </form>
+    <a href="{% url 'indice_coletor' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}
