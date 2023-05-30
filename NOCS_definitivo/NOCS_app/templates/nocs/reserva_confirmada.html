@@ -1,0 +1,18 @@
+{% extends 'nocs\base_b.html' %}
+{% block conteudo %}
+<div class="container" 
+        style="text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        min-height: 450px;">
+    <h1>Serviço reservado!</h1>
+    <p>
+        Reservamos a caçamba pedida para o horário e data desejados!<br>
+        A equipe NOCS fica feliz de poder ajudar!
+    </p>
+    <br>
+    <a href="{% url 'indice' %}" style="text-decoration: none;">
+        <button style="border-radius: 5%; background-color: green; color: #000;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

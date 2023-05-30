@@ -22,6 +22,13 @@ class Cadastro(models.Model):
     numero = models.IntegerField(default=0)
     complemento = models.TextField(default='-')
 
+class Reserva(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome = models.TextField(max_length=255)
+    endereco = models.TextField(default='-')
+    data = models.DateField()
+    hora = models.TimeField()
+
 class Coletor(models.Model):
     id = models.AutoField(primary_key=True)
     cpf = models.IntegerField(default=0)

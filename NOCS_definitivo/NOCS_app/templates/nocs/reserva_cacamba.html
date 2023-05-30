@@ -1,0 +1,29 @@
+{% extends 'nocs\base_b.html' %}
+{% block conteudo %}
+<div class="container" style="align-items: center; width: 80%; background-color: aquamarine; 
+        text-align: center; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 2%;">
+    <h1>NOCS</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>Reserve uma caçamba</h2>
+        <p>
+            Preencha as informações para reservar uma caçamba de lixo!
+        </p>
+        Nome: <input name="nome" class="form-control-sm" type="text" size="40"><br><br>
+        Endereço: <input name="endereco" class="form-control-sm" type="text" size="70"><br><br>
+        Data: <input name="data" class="form-control-sm" type="date" size="40">
+        Horário: <input name="hora" class="form-control-sm" type="time" size="40"><br><br>
+        <button class="form-control-sm" style="background-color: green; color: #000; width: 20ch; 
+        font-size: larger; margin-bottom: 2%;">
+            Reservar
+        </button>
+    </form>
+    <a href="{% url 'indice' %}" style="text-decoration: none;">
+        <button style="background-color: green; color: #000; width: 20ch; 
+                font-size: larger; margin-bottom: 2%;">
+            Voltar
+        </button>
+    </a>
+</div>
+{% endblock %}

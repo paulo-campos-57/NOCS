@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Mensagem
 from .models import Pergunta
 from .models import Cadastro
+from .models import Reserva
 from .models import Coletor
 from .models import Horario
 from .models import Rotas
@@ -71,6 +72,21 @@ def loja(request):
 
 def descr(request):
     return render(request, 'nocs/descr.html')
+
+def reserva_cacamba(request):
+    nova_reserva = Reserva()
+    if request.method == 'POST':
+        nova_reserva.nome = request.POST.get('nome')
+        nova_reserva.endereco = request.POST.get('endereco')
+        nova_reserva.data = request.POST.get('data')
+        nova_reserva.hora = request.POST.get('hora')
+
+        nova_reserva.save()
+        return render(request, 'nocs/reserva_confirmada.html')
+    return render(request, 'nocs/reserva_cacamba.html')
+
+def reserva_confrimada(request):
+    return render(request, 'nocs/reserva_confirmada.html')
 
 def info(request):
     return render(request, 'nocs/info.html')
