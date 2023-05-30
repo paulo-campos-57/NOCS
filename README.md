@@ -29,6 +29,6 @@ Para o desenvolvimento do projeto utilizamos a programação em pares, separando
 
 <a href="https://nocs-fds.atlassian.net/jira/software/projects/NOCS/boards/1" target="_blank">Jira</a>
 
-<a href="https://www.figma.com/proto/BfgSNLyymnLsSaWQHErm5A/PAULO-MONTENEGRO-CAMPOS's-team-library?type=design&node-id=750-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=750%3A73" target="_blank">Figma</a>
+<a href="https://www.figma.com/proto/BfgSNLyymnLsSaWQHErm5A/PAULO-MONTENEGRO-CAMPOS's-team-library?type=design&node-id=750-73&scaling=scale-down&page-id=0%3A1&starting-point-node-id=750%3A73" target="_blank">Figma</a>
 
 <a href="https://drive.google.com/drive/folders/1UqKjsLksfRtqIwFT7Q_p_ghjf1_EPRqv?usp=share_link">Drive - (Screencast, prints[issue bug tracker e quadro da sprint])</a>
