@@ -1,19 +1,29 @@
-on: 
-   push:
-    branches: 
-        - main
-name: Deploy website on push
-jobs: 
-   web-deploy:
-      name:  Deploy
-      runs-on: ubuntu-latest
-      steps:
-        - name:  Get latest code
-          uses: actions/checkout@v2
-
-        - name: Sync files
-          uses: Samkirkland/FTP-Deploy-Action@4.0.0 
-          with:
-             server:   ${{ secrets.ftp_host }}
-             username: ${{ secrets.ftp_user }}
-             password: ${{ secrets.ftp_password }}
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    jobs:
+      build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+      
+          - name: Build Docker image
+            uses: docker/build-push-action@v2
+            with:
+              context: .
+              push: false
+              tags: your-docker-registry/your-image-name:latest
+      
+          - name: Run tests
+            run: |
+      
+          - name: Deploy to production
+            uses: some-deployment-action@v1
+            with:
+              api_key: ${{ secrets.API_KEY }}
