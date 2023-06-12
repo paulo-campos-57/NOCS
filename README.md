@@ -16,7 +16,15 @@
 O NOCS (Nova Organização de Coleta Sanitária) tem como objetivo auxiliar o trabalho de coleta de lixo reduzindo o tempo e o gasto com patrulhas dos caminhões de coleta.
 
 ## Como foi desenvolvido o projeto
-Para o desenvolvimento do projeto utilizamos a programação em pares, separando equipes em funções diferentes. Uma das duplas ficou responsável pela criação do diagrama de atividades e atualizações no figma, já a outra foi responsável pelos testes com Selenium no projeto. Além disso, todos do grupo se integraram para o desenvolvimento das novas histórias para a entrega, fazendo com que elas ficassem alinhadas com o pensamento da maioria. Utilizamos também do método Kanban para a separação das nossas atividades da melhor maneira, o quadro dessa sprint e também da anterior pode ser encontrado em nosso <a href="https://nocs-fds.atlassian.net/jira/software/projects/NOCS/boards/1" target="_blank">Jira.</a>
+Para o desenvolvimento do projeto utilizamos a programação em pares, separando equipes em funções diferentes. Mantivémos o time de testes, mudando alguns integrantes, o mesmo aconteceu com o time de implementação. O time de deploy automatizado, por sua vez, se deparaou com muitas dificuldades, fazendo com que todos os times participassem ativamente da sua produção. Além disso, todos do grupo se integraram para o desenvolvimento das novas histórias para a entrega, fazendo com que elas ficassem alinhadas com o pensamento da maioria. Utilizamos também do método Kanban para a separação das nossas atividades da melhor maneira, o quadro dessa sprint e também da anterior pode ser encontrado em nosso <a href="https://nocs-fds.atlassian.net/jira/software/projects/NOCS/boards/1" target="_blank">Jira.</a>
+
+## Instruções para compilação do código
+Para a execução do projeto, é necessário ter uma versão do python 3;
+- Clone o repositório em seu terminal com o comando 'git clone';
+- Instale as dependências do projeto com o comando 'pip install -r requirements.txt';
+- Para a configuração do banco de dados, é necessário utilizar o comando 'python manage.py makemigrations', seguido de 'python manage.py migrate';
+- Para execução do código, clique com o botão direito na pasta onde está o arquivo manage.py e selecione a opção "open in integrated terminal", após isso, escreva nesse terminal o comando 'python manage.py runserver';
+- Para encerrar a execução, pressione 'ctrl + c' em seu terminal;
 
 ## Diagrama de Atividades
 
