@@ -40,3 +40,5 @@ Para a execução do projeto, é necessário ter uma versão do python 3;
 <a href="https://www.figma.com/proto/BfgSNLyymnLsSaWQHErm5A/PAULO-MONTENEGRO-CAMPOS's-team-library?type=design&node-id=750-73&scaling=scale-down&page-id=0%3A1&starting-point-node-id=750%3A73" target="_blank">Figma</a>
 
 <a href="https://drive.google.com/drive/folders/1UqKjsLksfRtqIwFT7Q_p_ghjf1_EPRqv?usp=share_link">Drive - (Screencast, prints[issue bug tracker e quadro da sprint])</a>
+
+<a href="https://www.canva.com/design/DAFlLQyYwwg/gAT9LSwS6emzIv6kESZBgw/edit?utm_content=DAFlLQyYwwg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Slide de apresentação</a>
