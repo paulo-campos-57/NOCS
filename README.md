@@ -20,7 +20,7 @@ Para o desenvolvimento do projeto utilizamos a programação em pares, separando
 
 ## Instruções para compilação do código
 Para a execução do projeto, é necessário ter uma versão do python 3;
-- Clone o repositório em seu terminal com o comando 'git clone';
+- Clone o repositório em seu terminal com o comando 'git clone https://github.com/paulo-campos-57/NOCS.git';
 - Instale as dependências do projeto com o comando 'pip install -r requirements.txt';
 - Para a configuração do banco de dados, é necessário utilizar o comando 'python manage.py makemigrations', seguido de 'python manage.py migrate';
 - Para execução do código, clique com o botão direito na pasta onde está o arquivo manage.py e selecione a opção "open in integrated terminal", após isso, escreva nesse terminal o comando 'python manage.py runserver';
